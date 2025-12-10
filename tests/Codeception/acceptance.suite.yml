@@ -1,0 +1,13 @@
+actor: AcceptanceTester
+modules:
+  enabled:
+    - Laravel:
+        environment_file: .env
+        cleanup: true
+    - Asserts
+    - \Helper\Acceptance
+gherkin:
+  contexts:
+    default:
+      - AcceptanceTester
+      - \Helper\Acceptance
