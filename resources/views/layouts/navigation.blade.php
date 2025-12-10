@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white/90 backdrop-blur border-b border-[#e3e8e4] shadow-sm">
     <div class="page-container h-16 flex items-center justify-between">
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-4">
             <a href="{{ route('dashboard') }}" class="flex items-center gap-2">
                 <x-application-logo class="block h-9 w-auto" />
             </a>
@@ -54,8 +54,8 @@
         </div>
     </div>
 
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden border-t border-[#e3e8e4]">
-        <div class="px-4 pt-4 pb-3 space-y-3 text-[#0b2f26]">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden border-t border-[#e3e8e4] bg-white">
+        <div class="px-4 pt-4 pb-3 space-y-2 text-[#0b2f26]">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
@@ -64,7 +64,7 @@
             </x-responsive-nav-link>
         </div>
 
-        <div class="pt-4 pb-4 border-t border-[#e3e8e4] space-y-3 px-4">
+        <div class="pt-3 pb-4 border-t border-[#e3e8e4] space-y-2 px-4">
             <div class="font-semibold text-base text-[#0b2f26]">{{ Auth::user()->name }}</div>
             <div class="text-sm text-gray-600">{{ Auth::user()->email }}</div>
 
