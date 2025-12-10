@@ -69,6 +69,22 @@
             color: var(--muted);
             font-size: 13px;
         }
+        @media (max-width: 640px) {
+            .auth-wrapper {
+                padding: 20px 0 12px;
+            }
+            .auth-card {
+                order: 1;
+                padding: 18px;
+            }
+            .auth-hero {
+                order: 2;
+            }
+            .auth-hero h1 {
+                font-size: 24px;
+            }
+            .brand-btn { width: 100%; justify-content: center; }
+        }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

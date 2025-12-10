@@ -21,7 +21,7 @@
         line-height: 1.6;
     }
     a { color: inherit; text-decoration: none; }
-    .page-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.page-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .brand-tag {
         display: inline-flex;
         align-items: center;
@@ -88,9 +88,14 @@
         color: var(--text);
         width: 100%;
     }
-    input:focus, select:focus, textarea:focus {
+input:focus, select:focus, textarea:focus {
         outline: 2px solid var(--green-300);
         border-color: var(--green-500);
         box-shadow: 0 0 0 3px rgba(24, 191, 160, 0.15);
+    }
+    @media (max-width: 768px) {
+        .page-container { padding: 0 16px; }
+        .brand-btn { width: 100%; justify-content: center; }
+        .glass-card { border-radius: 14px; }
     }
 </style>
