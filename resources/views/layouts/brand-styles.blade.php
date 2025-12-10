@@ -93,9 +93,9 @@ input:focus, select:focus, textarea:focus {
         border-color: var(--green-500);
         box-shadow: 0 0 0 3px rgba(24, 191, 160, 0.15);
     }
+    .brand-btn.fluid { width: 100%; justify-content: center; }
     @media (max-width: 768px) {
         .page-container { padding: 0 16px; }
-        .brand-btn { width: 100%; justify-content: center; }
         .glass-card { border-radius: 14px; }
     }
 </style>

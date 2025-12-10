@@ -85,10 +85,10 @@
                 </div>
                 <div class="glass-card p-4" style="margin-top:16px; display:grid; gap:10px;">
                     <label class="text-sm text-gray-700" for="shipping_address">Endereço de entrega</label>
-                    <textarea id="shipping_address" name="shipping_address" required rows="2" placeholder="Rua, número, cidade" ></textarea>
+                    <textarea id="shipping_address" name="shipping_address" required rows="2" placeholder="Rua, número, cidade"></textarea>
                     <label class="text-sm text-gray-700" for="shipping_zip">ZIP</label>
                     <input id="shipping_zip" name="shipping_zip" required type="text" placeholder="ZIP/CEP">
-                    <button class="brand-btn primary" type="submit">Enviar pedido</button>
+                    <button class="brand-btn primary fluid" type="submit">Enviar pedido</button>
                 </div>
             </form>
         @endif
