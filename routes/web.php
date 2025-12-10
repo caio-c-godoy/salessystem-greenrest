@@ -7,6 +7,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/partner/catalog', [\App\Http\Controllers\PartnerCatalogController::class, 'index'])->name('partner.catalog');
+    Route::get('/partner/orders', [\App\Http\Controllers\PartnerOrderController::class, 'index'])->name('partner.orders');
+    Route::post('/partner/orders', [\App\Http\Controllers\PartnerOrderController::class, 'store'])->name('partner.orders.store');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
