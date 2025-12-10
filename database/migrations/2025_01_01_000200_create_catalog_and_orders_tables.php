@@ -106,14 +106,18 @@ return new class extends Migration
         });
 
         Schema::table('users', function (Blueprint $table) {
-            $table->foreign('partner_id')->references('id')->on('partners')->nullOnDelete();
+            if (Schema::hasColumn('users', 'partner_id')) {
+                $table->foreign('partner_id')->references('id')->on('partners')->nullOnDelete();
+            }
         });
     }
 
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign(['partner_id']);
+            if (Schema::hasColumn('users', 'partner_id')) {
+                $table->dropForeign(['partner_id']);
+            }
         });
         Schema::dropIfExists('shipping_rules');
         Schema::dropIfExists('invoices');
