@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white/90 backdrop-blur border-b border-[#e3e8e4] shadow-sm">
     <div class="page-container h-16 flex items-center justify-between">
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3">
             <a href="{{ route('dashboard') }}" class="flex items-center gap-2">
                 <x-application-logo class="block h-9 w-auto" />
             </a>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="hidden sm:flex items-center gap-3">
+        <div class="hidden sm:flex items-center gap-2">
             <div class="pill">Portal seguro</div>
             <x-dropdown align="right" width="48">
                 <x-slot name="trigger">

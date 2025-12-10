@@ -75,6 +75,7 @@
         }
         nav a { padding: 6px 0; }
         .actions { display: flex; align-items: center; gap: 12px; }
+        .actions .btn { font-size: 15px; }
         .btn {
             display: inline-flex;
             align-items: center;
@@ -252,6 +253,18 @@
             color: var(--muted);
             text-align: center;
             font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .page { padding: 0 16px; }
+            nav { display: none; }
+            .topbar { padding: 10px 0; gap: 8px; }
+            .actions { gap: 8px; }
+            .actions .btn { padding: 10px 12px; font-size: 13px; border-radius: 10px; }
+            .hero-grid { grid-template-columns: 1fr; padding: 40px 0 20px; gap: 24px; }
+            .hero-card { order: 2; }
+            .section { padding: 36px 0; }
+            .products { padding: 18px; }
+            .grid { gap: 12px; }
         }
         @media (max-width: 900px) {
             nav { display: none; }
