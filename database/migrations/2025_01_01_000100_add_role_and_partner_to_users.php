@@ -10,15 +10,14 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('role')->default('partner')->after('password');
-            $table->foreignId('partner_id')->nullable()->after('role')->constrained()->nullOnDelete();
+            $table->foreignId('partner_id')->nullable()->after('role')->index();
         });
     }
 
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('partner_id');
-            $table->dropColumn('role');
+            $table->dropColumn(['partner_id', 'role']);
         });
     }
 };

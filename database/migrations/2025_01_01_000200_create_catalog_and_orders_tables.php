@@ -104,10 +104,17 @@ return new class extends Migration
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreign('partner_id')->references('id')->on('partners')->nullOnDelete();
+        });
     }
 
     public function down(): void
     {
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign(['partner_id']);
+        });
         Schema::dropIfExists('shipping_rules');
         Schema::dropIfExists('invoices');
         Schema::dropIfExists('order_items');
