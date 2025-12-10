@@ -1,17 +1,26 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+        <div>
+            <p class="text-sm text-gray-600 mb-1">Green Rest Portal</p>
+            <h2 class="text-2xl font-semibold text-[#0b2f26] leading-tight">Dashboard</h2>
+        </div>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="glass-card p-5">
+            <p class="text-sm text-gray-500">Status</p>
+            <h3 class="text-xl font-semibold text-[#0b2f26] mt-1">Você está logado</h3>
+            <p class="text-gray-600 mt-2">Acesse pedidos, parceiros e configurações pelo menu superior.</p>
+        </div>
+        <div class="glass-card p-5">
+            <p class="text-sm text-gray-500">Produtos</p>
+            <h3 class="text-lg font-semibold text-[#125c4b]">Catálogo sempre atualizado</h3>
+            <p class="text-gray-600 mt-2">Gerencie variantes, preços por parceiro e disponibilidade.</p>
+        </div>
+        <div class="glass-card p-5">
+            <p class="text-sm text-gray-500">Pedidos & Invoices</p>
+            <h3 class="text-lg font-semibold text-[#125c4b]">Fluxo integrado</h3>
+            <p class="text-gray-600 mt-2">Acompanhe produção, faturamento e documentos em um só lugar.</p>
         </div>
     </div>
 </x-app-layout>
